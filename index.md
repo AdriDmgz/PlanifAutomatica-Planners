@@ -55,10 +55,13 @@ Compilado ejecutable en Ubuntu proporcionado por autores en la web del planifica
 Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./sgplan522 (o versión descargada) para obtener entrada esperada y opciones de ejecución.
 
 ## Optic
-````
-sudo apt-get install coinor-clp
-sudo apt-get install libgsl-dev
-````
+* URL: https://nms.kcl.ac.uk/planning/software/optic.html
+
+### Instrucciones de instalación/compilación
+En la web se proporciona versión parcialmente compilada descargable a través del siguiente enlace: http://sourceforge.net/projects/tsgp/files/OPTIC/optic-clp.tar.bz2/download. Para terminar de compilarla, lo más sencillo es hacerlo con Ubuntu 14, dado que es necesario un compilador de C++ antiguo. En esta versión del SSOO bastará con instalar g++ con el comando ```sudo apt-get install g++``` y posteriormente terminar la compilación de Optic ejecutando el comando ```make``` en la carpeta descargada. El compilado puede ser usado posteriormente en versiones actuales de Ubuntu.
+
+### Instrucciones de uso
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./optic-clp para obtener entrada esperada y opciones de ejecución.
 
 # Planificadores ejecutables vía Singularity
 
