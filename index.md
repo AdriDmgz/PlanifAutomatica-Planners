@@ -12,7 +12,7 @@ Descargar código fuente de la URL dada y compilar código fuente usando herrami
 ### Instrucciones de uso
 Invocar por consola con ``java -jar ./pddl4j-3.8.3.jar`` para obtener entrada esperada y opciones de ejecución. También puede añadirse como planificador a plugin PDDL de Visual Studio Code con integración automática, indicando únicamente la ruta del .jar. Ver instrucciones del plugin para más información.
 
-## JavaFF (2015 V1.0 / 2018 V2.1)
+## JavaFF (2002 FF Original / 2015 JavaFF V1.0 / 2018 JavaFF V2.1)
 * URL: https://github.com/tonyallard/JavaFF (original)
 * URL: https://github.com/dpattiso/javaff (versión 2.1)
 * Compilado (.JAR): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/javaff.jar (versión 2.1)
@@ -38,36 +38,39 @@ Descargar fichero .JAR e invocar por consola con ``java -jar ./SapaReplan.jar`` 
 
 ## LPG-TD (2004)
 * URL: https://lpg.unibs.it/lpg/index.html
+* * Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/lpg-td.zip
 
 ### Instrucciones de instalación/compilación
 Compilado ejecutable en Ubuntu proporcionado por autores en el siguiente enlace: https://lpg.unibs.it/lpg/download-lpg-td.html. En la web se proporciona también una versión más antigua compilada para Windows 2000, pero en Windows 10 no solo no funciona, si no que provoca un bucle infinito de procesos de ejecución en segundo plano, obligando a reiniciar el sistema para poder detenerlos.
 
 ### Instrucciones de uso
-Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./lpg-td para obtener entrada esperada y opciones de ejecución.
+Descargar compilado en Ubuntu y descomprimir. Entrar en carpeta y dar permisos de ejecución con ``sudo chmod 755 ./lpg-td``. Ejecutar con ``./lpg-td`` para obtener entrada esperada y opciones de ejecución.
 
 ## SGPlan (2007)
 * URL: https://wah.cse.cuhk.edu.hk/wah/programs/SGPlan/
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/sgplan522.zip
 
 ### Instrucciones de instalación/compilación
 Compilado ejecutable en Ubuntu proporcionado por autores en la web del planificador.
 
 ### Instrucciones de uso
-Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./sgplan522 (o versión descargada) para obtener entrada esperada y opciones de ejecución.
+Descargar compilado en Ubuntu y descomprimir. Entrar en carpeta y dar permisos de ejecución con ``sudo chmod 755 ./sgplan522``. Ejecutar con ``./sgplan522`` (o versión descargada) para obtener entrada esperada y opciones de ejecución.
 
-## Optic
+## Optic (2012)
 * URL: https://nms.kcl.ac.uk/planning/software/optic.html
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/optic-clp.zip
 
 ### Instrucciones de instalación/compilación
 En la web se proporciona versión parcialmente compilada descargable a través del siguiente enlace: http://sourceforge.net/projects/tsgp/files/OPTIC/optic-clp.tar.bz2/download. Para terminar de compilarla, lo más sencillo es hacerlo con Ubuntu 14, dado que es necesario un compilador de C++ antiguo. En esta versión del SSOO bastará con instalar g++ con el comando ```sudo apt-get install g++``` y posteriormente terminar la compilación de Optic ejecutando el comando ```make``` en la carpeta descargada. El compilado puede ser usado posteriormente en versiones actuales de Ubuntu.
 
 ### Instrucciones de uso
-Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./optic-clp para obtener entrada esperada y opciones de ejecución.
+Descargar compilado en Ubuntu y descomprimir. Entrar en carpeta y dar permisos de ejecución con ``sudo chmod 755 ./optic-clp``. Ejecutar con ``./optic-clp`` para obtener entrada esperada y opciones de ejecución.
 
 # Planificadores ejecutables vía Singularity
 
 ## Singularity
 
-## FastDownward y variantes
+## FastDownward (2004) y planificadores derivados (2011)
 
 ````
 singularity pull --name downward.sif shub://aibasel/downward
