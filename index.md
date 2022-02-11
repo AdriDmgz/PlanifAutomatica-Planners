@@ -55,8 +55,10 @@ Compilado ejecutable en Ubuntu proporcionado por autores en la web del planifica
 Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./sgplan522 (o versión descargada) para obtener entrada esperada y opciones de ejecución.
 
 ## Optic
-
-* sudo apt-get install gsl-bin
+````
+sudo apt-get install coinor-clp
+udo apt-get install libgsl-dev
+````
 
 # Planificadores ejecutables vía Singularity
 
