@@ -40,14 +40,23 @@ Descargar fichero .JAR e invocar por consola con ``java -jar ./SapaReplan.jar`` 
 * URL: https://lpg.unibs.it/lpg/index.html
 
 ### Instrucciones de instalación/compilación
-Compilado ejecutable para Ubuntu proporcionado por autores en el siguiente enlace: https://lpg.unibs.it/lpg/download-lpg-td.html. En la web se proporciona también una versión más antigua compilada para Windows 2000, pero en Windows 10 no solo no funciona, si no que provoca un bucle infinito de procesos de ejecución en segundo plano, obligando a reiniciar el sistema para poder detenerlos.
+Compilado ejecutable en Ubuntu proporcionado por autores en el siguiente enlace: https://lpg.unibs.it/lpg/download-lpg-td.html. En la web se proporciona también una versión más antigua compilada para Windows 2000, pero en Windows 10 no solo no funciona, si no que provoca un bucle infinito de procesos de ejecución en segundo plano, obligando a reiniciar el sistema para poder detenerlos.
 
 ### Instrucciones de uso
 Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./lpg-td para obtener entrada esperada y opciones de ejecución.
 
-## SGGraph
+## SGPlan (2007)
+* URL: https://wah.cse.cuhk.edu.hk/wah/programs/SGPlan/
+
+### Instrucciones de instalación/compilación
+Compilado ejecutable en Ubuntu proporcionado por autores en la web del planificador.
+
+### Instrucciones de uso
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./sgplan522 (o versión descargada) para obtener entrada esperada y opciones de ejecución.
 
 ## Optic
+
+* sudo apt-get install gsl-bin
 
 # Planificadores ejecutables vía Singularity
 
