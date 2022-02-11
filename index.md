@@ -57,7 +57,7 @@ Descargar compilado en Ubuntu y descomprimir. Ejecutar con ./sgplan522 (o versi√
 ## Optic
 ````
 sudo apt-get install coinor-clp
-udo apt-get install libgsl-dev
+sudo apt-get install libgsl-dev
 ````
 
 # Planificadores ejecutables v√≠a Singularity
@@ -65,3 +65,9 @@ udo apt-get install libgsl-dev
 ## Singularity
 
 ## FastDownward y variantes
+
+````
+singularity pull --name downward.sif shub://aibasel/downward
+singularity run downward.sif --alias lama-first ./dominio.pddl .problema.pddl
+singularity run downward.sif --show-aliases
+````
