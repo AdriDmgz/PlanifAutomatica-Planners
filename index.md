@@ -42,7 +42,7 @@ Compilado ejecutable en Ubuntu proporcionado por autores en la web del planifica
 
 ### Instrucciones de uso
 
-Descargar compilado en Ubuntu y descomprimir. El compilado incliye varios ficheros, ya que el planificador es modular e incluye distintos 'solvers'. Ejecutar con ./satplan para obtener entrada esperada y opciones de ejecución. Usar opción ``-solver siegue`` para usar el mismo solver que en IPC 2004.
+Descargar compilado en Ubuntu y descomprimir. El compilado incliye varios ficheros, ya que el planificador es modular e incluye distintos 'solvers'. Ejecutar con ``./satplan`` para obtener entrada esperada y opciones de ejecución. Usar opción ``-solver siegue`` para usar el mismo solver que en IPC 2004.
 ````
 ./satplan -solver siege -domain fichero-dominio.pddl -problem fichero-problema.pddl 
 ````
