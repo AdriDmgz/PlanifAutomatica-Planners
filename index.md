@@ -36,7 +36,7 @@ Descargar fichero .JAR e invocar por consola con ``java -jar ./SapaReplan.jar`` 
 
 # Planificadores para Ubuntu
 
-## FF
+## Fast Forward (FF)
 * URL (FF): https://fai.cs.uni-saarland.de/hoffmann/ff.html
 * Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/ff.tar.xz
 
