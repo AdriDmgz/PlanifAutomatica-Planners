@@ -36,9 +36,22 @@ Descargar fichero .JAR e invocar por consola con ``java -jar ./SapaReplan.jar`` 
 
 # Planificadores para Ubuntu
 
+## SATPLAN
+* URL: https://www.cs.rochester.edu/u/kautz/satplan/
+
+### Instrucciones de instalación/compilación
+Compilado ejecutable en Ubuntu proporcionado por autores en la web del planificador.
+
+### Instrucciones de uso
+
+Descargar compilado en Ubuntu y descomprimir. El compilado incliye varios ficheros, ya que el planificador es modular e incluye distintos 'solvers'. Ejecutar con ./satplan para obtener entrada esperada y opciones de ejecución. Usar opción ``-solver siegue`` para usar el mismo solver que en IPC 2004.
+````
+./satplan -solver siege -domain fichero-dominio.pddl -problem fichero-problema.pddl 
+````
+
 ## LPG-TD (2004)
 * URL: https://lpg.unibs.it/lpg/index.html
-* * Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/lpg-td.zip
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/lpg-td.zip
 
 ### Instrucciones de instalación/compilación
 Compilado ejecutable en Ubuntu proporcionado por autores en el siguiente enlace: https://lpg.unibs.it/lpg/download-lpg-td.html. En la web se proporciona también una versión más antigua compilada para Windows 2000, pero en Windows 10 no solo no funciona, si no que provoca un bucle infinito de procesos de ejecución en segundo plano, obligando a reiniciar el sistema para poder detenerlos.
