@@ -82,13 +82,29 @@ Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./optic-clp`` para 
 
 ## Singularity
 
+### Instrucciones de instalación/compilación
+
+Instalar última versión de Singularity siguiendo instrucciones: https://sylabs.io/guides/3.9/user-guide/quick_start.html
+
 ## FastDownward y derivados
+* URL: https://www.fast-downward.org/HomePage
+
+### Instrucciones de instalación/compilación
+
+Tras instalar Singularity, descargar container de FastDownward: 
 
 ````
 singularity pull --name downward.sif shub://aibasel/downward
-singularity run downward.sif --alias lama-first ./dominio.pddl .problema.pddl
-singularity run downward.sif --show-aliases
 ````
+### Instrucciones de uso
+
+Una vez descargado, Singularity permite ejecutar el fichero .sif directamente, como en los siguientes ejemplos:
+````
+./downward.sif
+./downward.sif --show-aliases
+./downward.sif --alias lama-first ./dominio.pddl .problema.pddl
+````
+Ejecutar sin opciones para ver entrada esperada y opciones de ejecución. Mediante opción ``--show-aliases`` se pueden consultar configuraciones predefinidas del planificador, ya que es modular y tiene gran cantidad de configuraciones. Consultar web del planificador para más información.
 
 # Planificadores Java
 
