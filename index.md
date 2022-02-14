@@ -3,8 +3,8 @@ En este documento se recopila información sobre el proceso de instalación y us
 # Planificadores para Ubuntu
 
 ## Fast Forward (FF)
-* URL (FF): https://fai.cs.uni-saarland.de/hoffmann/ff.html
-* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/ff.tar.xz
+* URL (FF): <https://fai.cs.uni-saarland.de/hoffmann/ff.html>
+* Compilado (Ubuntu): <https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/ff.tar.xz>
 
 ### Instrucciones de instalación/compilación
 Descargar código fuente de la web y compilar mediante gcc en Ubuntu:
@@ -18,8 +18,8 @@ Es posible que sea necesario añadir opciones adicionales al compilador  o insta
 Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./ff`` para obtener entrada esperada y opciones de ejecución.
 
 ## Metric-FF
-* URL (FF): https://fai.cs.uni-saarland.de/hoffmann/metric-ff.html
-* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/metric-ff.tar.xz
+* URL (FF): <https://fai.cs.uni-saarland.de/hoffmann/metric-ff.html>
+* Compilado (Ubuntu): <https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/metric-ff.tar.xz>
 
 ### Instrucciones de instalación/compilación
 Descargar código fuente de la web y compilar mediante gcc en Ubuntu:
