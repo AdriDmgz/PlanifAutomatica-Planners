@@ -1,5 +1,95 @@
 En este documento se recopila información sobre el proceso de instalación y uso de distintos planificadores automáticos que son, relativamente, fáciles de instalar, ya sea por proporcionar un compilado, por estar desarrollados en Java o por poderse ejecutar mediante contenedores Singularity.
 
+# Planificadores para Ubuntu
+
+## Fast Forward (FF)
+* URL (FF): https://fai.cs.uni-saarland.de/hoffmann/ff.html
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/ff.tar.xz
+
+### Instrucciones de instalación/compilación
+Descargar código fuente de la web y compilar mediante gcc en Ubuntu:
+````
+gcc -c *.c
+gcc -o ff *.o
+````
+Es posible que sea necesario añadir opciones adicionales al compilador  o instalar dependencias, según indiquen los errores en la compilación.
+
+### Intrucciones de ejecución
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./ff`` para obtener entrada esperada y opciones de ejecución.
+
+## Metric-FF
+* URL (FF): https://fai.cs.uni-saarland.de/hoffmann/metric-ff.html
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/metric-ff.tar.xz
+
+### Instrucciones de instalación/compilación
+Descargar código fuente de la web y compilar mediante gcc en Ubuntu:
+````
+gcc -c *.c
+gcc -o metric-ff *.o
+````
+Es posible que sea necesario añadir opciones adicionales al compilador o instalar dependencias, según indiquen los errores en la compilación.
+
+### Intrucciones de ejecución
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./metric-ff`` para obtener entrada esperada y opciones de ejecución.
+
+## SATPLAN
+* URL: https://www.cs.rochester.edu/u/kautz/satplan/
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/satplan.tar.xz
+
+
+### Instrucciones de instalación/compilación
+Compilado ejecutable en Ubuntu proporcionado por autores en la web del planificador.
+
+### Instrucciones de uso
+
+Descargar compilado en Ubuntu y descomprimir. El compilado incliye varios ficheros, ya que el planificador es modular e incluye distintos 'solvers'. Ejecutar con ./satplan para obtener entrada esperada y opciones de ejecución. Usar opción ``-solver siegue`` para usar el mismo solver que en IPC 2004.
+````
+./satplan -solver siege -domain fichero-dominio.pddl -problem fichero-problema.pddl 
+````
+
+## LPG-TD
+* URL: https://lpg.unibs.it/lpg/index.html
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/lpg-td.tar.xz
+
+### Instrucciones de instalación/compilación
+Compilado ejecutable en Ubuntu proporcionado por autores en el siguiente enlace: https://lpg.unibs.it/lpg/download-lpg-td.html. En la web se proporciona también una versión más antigua compilada para Windows 2000, pero en Windows 10 no solo no funciona, si no que provoca un bucle infinito de procesos de ejecución en segundo plano, obligando a reiniciar el sistema para poder detenerlos.
+
+### Instrucciones de uso
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./lpg-td`` para obtener entrada esperada y opciones de ejecución.
+
+## SGPlan 4 y SGPlan 5
+* URL: https://wah.cse.cuhk.edu.hk/wah/programs/SGPlan/
+* Compilado SGPlan 4.0 (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/sgplan40.tar.xz
+* Compilado SGPlan 5.2.2 (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/sgplan522.tar.xz
+
+### Instrucciones de instalación/compilación
+Compilado ejecutable en Ubuntu proporcionado por autores en la web del planificador.
+
+### Instrucciones de uso
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./sgplan40`` (o versión descargada) para obtener entrada esperada y opciones de ejecución.
+
+## Optic
+* URL: https://nms.kcl.ac.uk/planning/software/optic.html
+* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/optic-clp.tar.xz
+
+### Instrucciones de instalación/compilación
+En la web se proporciona versión parcialmente compilada descargable a través del siguiente enlace: http://sourceforge.net/projects/tsgp/files/OPTIC/optic-clp.tar.bz2/download. Para terminar de compilarla, lo más sencillo es hacerlo con Ubuntu 14, dado que es necesario un compilador de C++ antiguo. En esta versión del SSOO bastará con instalar g++ con el comando ```sudo apt-get install g++``` y posteriormente terminar la compilación de Optic ejecutando el comando ```make``` en la carpeta descargada. El compilado puede ser usado posteriormente en versiones actuales de Ubuntu.
+
+### Instrucciones de uso
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./optic-clp`` para obtener entrada esperada y opciones de ejecución.
+
+# Planificadores ejecutables vía Singularity
+
+## Singularity
+
+## FastDownward y derivados
+
+````
+singularity pull --name downward.sif shub://aibasel/downward
+singularity run downward.sif --alias lama-first ./dominio.pddl .problema.pddl
+singularity run downward.sif --show-aliases
+````
+
 # Planificadores Java
 
 ## PDDL4J
@@ -33,47 +123,3 @@ Fichero .jar proprocionado por autores en la web.
 ### Instrucciones de uso
 
 Descargar fichero .JAR e invocar por consola con ``java -jar ./SapaReplan.jar`` para obtener entrada esperada y opciones de ejecución.
-
-# Planificadores para Ubuntu
-
-## LPG-TD (2004)
-* URL: https://lpg.unibs.it/lpg/index.html
-* * Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/lpg-td.zip
-
-### Instrucciones de instalación/compilación
-Compilado ejecutable en Ubuntu proporcionado por autores en el siguiente enlace: https://lpg.unibs.it/lpg/download-lpg-td.html. En la web se proporciona también una versión más antigua compilada para Windows 2000, pero en Windows 10 no solo no funciona, si no que provoca un bucle infinito de procesos de ejecución en segundo plano, obligando a reiniciar el sistema para poder detenerlos.
-
-### Instrucciones de uso
-Descargar compilado en Ubuntu y descomprimir. Entrar en carpeta y dar permisos de ejecución con ``sudo chmod 755 ./lpg-td``. Ejecutar con ``./lpg-td`` para obtener entrada esperada y opciones de ejecución.
-
-## SGPlan (2007)
-* URL: https://wah.cse.cuhk.edu.hk/wah/programs/SGPlan/
-* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/sgplan522.zip
-
-### Instrucciones de instalación/compilación
-Compilado ejecutable en Ubuntu proporcionado por autores en la web del planificador.
-
-### Instrucciones de uso
-Descargar compilado en Ubuntu y descomprimir. Entrar en carpeta y dar permisos de ejecución con ``sudo chmod 755 ./sgplan522``. Ejecutar con ``./sgplan522`` (o versión descargada) para obtener entrada esperada y opciones de ejecución.
-
-## Optic (2012)
-* URL: https://nms.kcl.ac.uk/planning/software/optic.html
-* Compilado (Ubuntu): https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/optic-clp.zip
-
-### Instrucciones de instalación/compilación
-En la web se proporciona versión parcialmente compilada descargable a través del siguiente enlace: http://sourceforge.net/projects/tsgp/files/OPTIC/optic-clp.tar.bz2/download. Para terminar de compilarla, lo más sencillo es hacerlo con Ubuntu 14, dado que es necesario un compilador de C++ antiguo. En esta versión del SSOO bastará con instalar g++ con el comando ```sudo apt-get install g++``` y posteriormente terminar la compilación de Optic ejecutando el comando ```make``` en la carpeta descargada. El compilado puede ser usado posteriormente en versiones actuales de Ubuntu.
-
-### Instrucciones de uso
-Descargar compilado en Ubuntu y descomprimir. Entrar en carpeta y dar permisos de ejecución con ``sudo chmod 755 ./optic-clp``. Ejecutar con ``./optic-clp`` para obtener entrada esperada y opciones de ejecución.
-
-# Planificadores ejecutables vía Singularity
-
-## Singularity
-
-## FastDownward (2004) y planificadores derivados (2011)
-
-````
-singularity pull --name downward.sif shub://aibasel/downward
-singularity run downward.sif --alias lama-first ./dominio.pddl .problema.pddl
-singularity run downward.sif --show-aliases
-````
