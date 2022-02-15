@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Planificadores PDDL
 subtitle: Instrucciones de instalación y uso
+github:
+  is_project_page: false
