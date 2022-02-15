@@ -82,8 +82,6 @@ Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./optic-clp`` para 
 
 ## Singularity
 
-### Instrucciones de instalación/compilación
-
 Instalar última versión de Singularity siguiendo instrucciones: <a href="https://sylabs.io/guides/3.9/user-guide/quick_start.html" target="_blank">https://sylabs.io/guides/3.9/user-guide/quick_start.html</a>
 
 ## FastDownward y derivados
