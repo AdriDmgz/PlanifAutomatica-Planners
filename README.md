@@ -19,18 +19,18 @@ Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./ff`` para obtener
 
 ## Metric-FF
 * URL (FF): <a href="https://fai.cs.uni-saarland.de/hoffmann/metric-ff.html" target="_blank">https://fai.cs.uni-saarland.de/hoffmann/metric-ff.html</a>
-* Compilado (Ubuntu): <https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/metric-ff.tar.xz>
+* Compilado (Ubuntu): <https://github.com/AdriDmgz/PlanifAutomatica-Planners/raw/main/metricff.tar.xz>
 
 ### Instrucciones de instalación/compilación
 Descargar código fuente de la web y compilar mediante gcc en Ubuntu:
 ````
 gcc -c *.c
-gcc -o metric-ff *.o
+gcc -o metricff *.o
 ````
 Es posible que sea necesario añadir opciones adicionales al compilador o instalar dependencias, según indiquen los errores en la compilación.
 
 ### Intrucciones de ejecución
-Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./metric-ff`` para obtener entrada esperada y opciones de ejecución.
+Descargar compilado en Ubuntu y descomprimir. Ejecutar con ``./metricff`` para obtener entrada esperada y opciones de ejecución.
 
 ## SATPLAN
 * URL: <a href="https://www.cs.rochester.edu/u/kautz/satplan/" target="_blank">https://www.cs.rochester.edu/u/kautz/satplan/</a>
