@@ -1,4 +1,4 @@
-En este documento se recopila información sobre el proceso de instalación y uso de distintos planificadores automáticos que son, relativamente, fáciles de instalar, ya sea por proporcionar un compilado, por estar desarrollados en Java o por poderse ejecutar mediante contenedores Singularity.
+En este documento se recopila información sobre el proceso de instalación y uso de distintos planificadores automáticos que se utilizarán en los laboratorios.
 
 # Planificadores para Ubuntu
 
